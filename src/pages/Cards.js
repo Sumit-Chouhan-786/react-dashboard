@@ -2,7 +2,6 @@ import React from 'react'
 
 import PageTitle from '../components/Typography/PageTitle'
 import SectionTitle from '../components/Typography/SectionTitle'
-import CTA from '../components/CTA'
 import InfoCard from '../components/Cards/InfoCard'
 import { Card, CardBody } from '@windmill/react-ui'
 import { CartIcon, ChatIcon, MoneyIcon, PeopleIcon } from '../icons'
@@ -12,8 +11,6 @@ function Cards() {
   return (
     <>
       <PageTitle>Cards</PageTitle>
-
-      <CTA />
 
       <SectionTitle>Big section cards</SectionTitle>
 
@@ -28,7 +25,7 @@ function Cards() {
       <SectionTitle>Responsive cards</SectionTitle>
 
       <div className="grid gap-6 mb-8 md:grid-cols-2 xl:grid-cols-4">
-        <InfoCard title="Total clients" value="6389">
+        <InfoCard title="Total customers" value="6389">
           <RoundIcon
             icon={PeopleIcon}
             iconColorClass="text-orange-500 dark:text-orange-100"
@@ -37,7 +34,7 @@ function Cards() {
           />
         </InfoCard>
 
-        <InfoCard title="Account balance" value="$ 46,760.89">
+        <InfoCard title="Total Sellers" value="5000">
           <RoundIcon
             icon={MoneyIcon}
             iconColorClass="text-green-500 dark:text-green-100"

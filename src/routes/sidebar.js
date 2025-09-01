@@ -12,61 +12,34 @@ const routes = [
     name: 'Dashboard', // name that appear in Sidebar
   },
   {
-    path: '/app/forms',
+    path: '/app/add-customer',
     icon: 'FormsIcon',
-    name: 'Forms',
+    name: 'Add Customer',
   },
   {
-    path: '/app/cards',
+    path: '/app/add-customer-product',
+    icon: 'FormsIcon',
+    name: 'Add Customer Product',
+  },
+  {
+    path: '/app/add-customer-blog',
+    icon: 'FormsIcon',
+    name: 'Add Customer Blog',
+  },
+  {
+    path: '/app/all-customers',
     icon: 'CardsIcon',
-    name: 'Cards',
+    name: 'All Customers',
   },
   {
-    path: '/app/charts',
+    path: '/app/add-seller',
     icon: 'ChartsIcon',
-    name: 'Charts',
+    name: 'Add Seller',
   },
   {
-    path: '/app/buttons',
-    icon: 'ButtonsIcon',
-    name: 'Buttons',
-  },
-  {
-    path: '/app/modals',
-    icon: 'ModalsIcon',
-    name: 'Modals',
-  },
-  {
-    path: '/app/tables',
-    icon: 'TablesIcon',
-    name: 'Tables',
-  },
-  {
-    icon: 'PagesIcon',
-    name: 'Pages',
-    routes: [
-      // submenu
-      {
-        path: '/login',
-        name: 'Login',
-      },
-      {
-        path: '/create-account',
-        name: 'Create account',
-      },
-      {
-        path: '/forgot-password',
-        name: 'Forgot password',
-      },
-      {
-        path: '/app/404',
-        name: '404',
-      },
-      {
-        path: '/app/blank',
-        name: 'Blank',
-      },
-    ],
+    path: '/app/all-seller',
+     icon: 'CardsIcon',
+    name: 'All Seller',
   },
 ]
 

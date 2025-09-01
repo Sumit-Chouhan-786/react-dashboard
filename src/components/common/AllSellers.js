@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import PageTitle from '../components/Typography/PageTitle'
-import SectionTitle from '../components/Typography/SectionTitle'
+import PageTitle from '../Typography/PageTitle'
+import SectionTitle from '../Typography/SectionTitle'
 
 import {
   Table,
@@ -15,13 +15,13 @@ import {
   Button,
   Pagination,
 } from '@windmill/react-ui'
-import { EditIcon, TrashIcon } from '../icons'
+import { EditIcon, TrashIcon } from '../../icons'
 
-import response from '../utils/demo/tableData'
+import response from '../../utils/demo/tableData'
 // make a copy of the data, for the second table
 const response2 = response.concat([])
 
-function Tables() {
+function AllCustomers() {
   /**
    * DISCLAIMER: This code could be badly improved, but for the sake of the example
    * and readability, all the logic for both table are here.
@@ -67,7 +67,7 @@ function Tables() {
   return (
     <>
       <PageTitle>Tables</PageTitle>      
-      <SectionTitle>Table with actions</SectionTitle>
+      <SectionTitle>All Sellers</SectionTitle>
       <TableContainer className="mb-8">
         <Table>
           <TableHeader>
@@ -102,12 +102,16 @@ function Tables() {
                 </TableCell>
                 <TableCell>
                   <div className="flex items-center space-x-4">
+                     <a href="/app/update-seller">
                     <Button layout="link" size="icon" aria-label="Edit">
                       <EditIcon className="w-5 h-5" aria-hidden="true" />
                     </Button>
-                    <Button layout="link" size="icon" aria-label="Delete">
-                      <TrashIcon className="w-5 h-5" aria-hidden="true" />
-                    </Button>
+                    </a>
+                    <a href="#">
+                        <Button layout="link" size="icon" aria-label="Delete">
+                          <TrashIcon className="w-5 h-5" aria-hidden="true" />
+                        </Button>
+                    </a>
                   </div>
                 </TableCell>
               </TableRow>
@@ -127,4 +131,4 @@ function Tables() {
   )
 }
 
-export default Tables
+export default AllCustomers

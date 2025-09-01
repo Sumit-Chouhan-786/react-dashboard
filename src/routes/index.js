@@ -1,8 +1,17 @@
 import { lazy } from 'react'
+import AddCustomer from '../components/common/AddCustomer'
+import UpdateCustomer from '../components/common/UpdateCustomer'
+import UpdateSeller from '../components/common/UpdateSeller'
+import AddSeller from '../components/common/AddSeller'
+import UpdateCustomerProduct from '../components/common/UpdateCustomerProduct'
+import AddCustomerProduct from '../components/common/AddCustomerProduct'
+import AddCustomerBlog from '../components/common/AddCustomerBlog'
+import UpdateCustomerBlog from '../components/common/UpdateCustomerBlog'
+import AllCustomers from '../components/common/AllCustomers'
+import AllSellers from '../components/common/AllSellers'
 
 // use lazy for better code splitting, a.k.a. load faster
 const Dashboard = lazy(() => import('../pages/Dashboard'))
-const Forms = lazy(() => import('../pages/Forms'))
 const Cards = lazy(() => import('../pages/Cards'))
 const Charts = lazy(() => import('../pages/Charts'))
 const Buttons = lazy(() => import('../pages/Buttons'))
@@ -27,8 +36,49 @@ const routes = [
     component: Dashboard, // view rendered
   },
   {
-    path: '/forms',
-    component: Forms,
+    path: '/add-customer',
+    component: AddCustomer,
+  },
+  {
+    path: '/add-customer-product',
+    component: AddCustomerProduct,
+  },
+  {
+    path: '/add-customer-blog',
+    component: AddCustomerBlog,
+  },
+   {
+    path: '/update-Customer',
+    component: UpdateCustomer,
+  },
+  {
+    path: '/update-customer-product',
+    component: UpdateCustomerProduct,
+  },
+  {
+    path: '/update-customer-blog',
+    component: UpdateCustomerBlog,
+  },
+  {
+    path: '/all-customers',
+    component: AllCustomers,
+  },
+  {
+    path: '/update-customer-blog',
+    component: UpdateCustomerBlog,
+  },
+ 
+  {
+    path: '/add-Seller',
+    component: AddSeller,
+  },
+  {
+    path: '/Update-seller',
+    component: UpdateSeller,
+  },
+  {
+    path: '/all-seller',
+    component: AllSellers,
   },
   {
     path: '/cards',

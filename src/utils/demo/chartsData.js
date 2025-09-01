@@ -1,7 +1,7 @@
 export const doughnutLegends = [
-  { title: 'Shirts', color: 'bg-blue-500' },
-  { title: 'Shoes', color: 'bg-teal-600' },
-  { title: 'Bags', color: 'bg-purple-600' },
+  { title: 'Sellers', color: 'bg-blue-500' },
+  { title: 'Customers', color: 'bg-teal-600' },
+  { title: 'admin', color: 'bg-purple-600' },
 ]
 
 export const lineLegends = [
@@ -18,7 +18,7 @@ export const doughnutOptions = {
   data: {
     datasets: [
       {
-        data: [33, 33, 33],
+        data: [40, 40, 20],
         /**
          * These colors come from Tailwind CSS palette
          * https://tailwindcss.com/docs/customizing-colors/#default-color-palette
@@ -27,7 +27,7 @@ export const doughnutOptions = {
         label: 'Dataset 1',
       },
     ],
-    labels: ['Shoes', 'Shirts', 'Bags'],
+    labels: ['Sellers', 'Customers', 'admin'],
   },
   options: {
     responsive: true,
