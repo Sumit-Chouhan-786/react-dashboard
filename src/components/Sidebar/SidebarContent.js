@@ -4,7 +4,7 @@ import { NavLink, Route } from 'react-router-dom'
 import * as Icons from '../../icons'
 import SidebarSubmenu from './SidebarSubmenu'
 import { Button } from '@windmill/react-ui'
-
+import logo from "../../assets/img/logo.webp"
 function Icon({ icon, ...props }) {
   const Icon = Icons[icon]
   return <Icon {...props} />
@@ -13,9 +13,19 @@ function Icon({ icon, ...props }) {
 function SidebarContent() {
   return (
     <div className="py-4 text-gray-500 dark:text-gray-400">
-      <a className="ml-6 text-lg font-bold text-gray-800 dark:text-gray-200" href="#">
-        Shopneo
-      </a>
+   <a
+  className="text-lg font-bold text-gray-800 dark:text-gray-200"
+  href="/app/dashboard"
+>
+  <img
+    className="block ml-8"
+    height={50}
+    width={100}
+    src={logo}
+    alt="logo"
+  />
+</a>
+
       <ul className="mt-6">
         {routes.map((route) =>
           route.routes ? (

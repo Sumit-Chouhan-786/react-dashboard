@@ -4,10 +4,7 @@ import {
   SearchIcon,
   MoonIcon,
   SunIcon,
-  BellIcon,
   MenuIcon,
-  OutlinePersonIcon,
-  OutlineCogIcon,
   OutlineLogoutIcon,
 } from '../icons'
 import { Avatar, Badge, Input, Dropdown, DropdownItem, WindmillContext } from '@windmill/react-ui'
@@ -16,16 +13,8 @@ function Header() {
   const { mode, toggleMode } = useContext(WindmillContext)
   const { toggleSidebar } = useContext(SidebarContext)
 
-  const [isNotificationsMenuOpen, setIsNotificationsMenuOpen] = useState(false)
   const [isProfileMenuOpen, setIsProfileMenuOpen] = useState(false)
 
-  function handleNotificationsClick() {
-    setIsNotificationsMenuOpen(!isNotificationsMenuOpen)
-  }
-
-  function handleProfileClick() {
-    setIsProfileMenuOpen(!isProfileMenuOpen)
-  }
 
   return (
     <header className="z-40 py-4 bg-white shadow-bottom dark:bg-gray-800">
@@ -68,19 +57,13 @@ function Header() {
           </li>
           {/* <!-- Profile menu --> */}
           <li className="relative">
-            <button
-              className="rounded-full focus:shadow-outline-purple focus:outline-none"
-              onClick={handleProfileClick}
-              aria-label="Account"
-              aria-haspopup="true"
-            >
+          
               <Avatar
                 className="align-middle"
-                src="https://image2url.com/images/1756707682296-285c39e2-0385-4339-85be-4ddc59af4e69.webp"
-                alt="avatar"
+                src="https://img.freepik.com/premium-photo/software-engineer-digital-avatar-generative-ai_934475-8997.jpg?w=2000"
+                alt="logo"
                 aria-hidden="true"
               />
-            </button>
             <Dropdown
               align="right"
               isOpen={isProfileMenuOpen}
